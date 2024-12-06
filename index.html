@@ -83,17 +83,7 @@
             background: #555;
         }
     </style>
-  <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "7M_gAMOfJYktxzTn5",
-      });
-   })();
-</script>
-    <script src="node.js"> </script>
+
 </head>
 <body>
     <header>
@@ -123,7 +113,7 @@
 
         <section id="contact" class="contact">
             <h2>Contact Us</h2>
-            <form onsubmit="submitForm(event)">
+            <form action="https://api.web3forms.com/submit" method="POST">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -132,7 +122,7 @@
 
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
-
+                 <input type="hidden" name="access_key" value="25827061-1f83-4cd8-ab28-045b2cec9173">
                 <button type="submit" onclick="sendMail()">Send</button>
             </form>
         </section>
